@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: mastodata
+  name: sink
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sink
+  template:
+    metadata:
+      labels:
+        app: sink
+    spec:
+      containers:
+        - name: sink
+          image: ghcr.io/mastodata/sink:edge
+          imagePullPolicy: Always
+          env:
+            - name: SINK_ADDRESS
+              value: "tcp://*:5559"
+      imagePullSecrets:
+        - name: ghcr-login
