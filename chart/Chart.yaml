@@ -1,0 +1,10 @@
+apiVersion: v2
+name: mastodata
+description: A Helm chart to automate installation and configuration of dependencies
+type: application
+version: "0.1.0"
+appVersion: "0.1.0"
+dependencies:
+  - name: questdb
+    version: "7.3.1"
+    repository: "https://helm.questdb.io/"

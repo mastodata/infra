@@ -12,3 +12,10 @@ repos:
       - id: mixed-line-ending
         args: [ --fix=lf ]
       - id: end-of-file-fixer
+
+  - repo: local
+    hooks:
+      - id: helm-lint
+        name: helm lint
+        language: system
+        entry: bash -c 'cd chart && helm lint'
