@@ -3,23 +3,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: mastodata
-  name: vent
+  name: task
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vent
+      app: task
   template:
     metadata:
       labels:
-        app: vent
+        app: task
     spec:
       containers:
-        - name: vent
-          image: ghcr.io/mastodata/vent:edge
+        - name: task
+          image: ghcr.io/mastodata/task:edge
           imagePullPolicy: Always
           env:
             - name: TASK_ADDRESS
-              value: "tcp://task:5559"
+              value: "tcp://*:5559"
+            - name: SINK_ADDRESS
+              value: "tcp://sink:5559"
       imagePullSecrets:
         - name: ghcr-login

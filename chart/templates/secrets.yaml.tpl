@@ -4,8 +4,6 @@ kind: Secret
 metadata:
   name: ghcr-login
   namespace: mastodata
+type: kubernetes.io/dockerconfigjson
 data:
-{{- $ctx := .Values.secrets.imagePullSecret -}}
-{{- range $key, $value := $ctx }}
-  {{ $key }}: {{ $value | b64enc }}
-{{- end }}
+  .dockerconfigjson: {{ .Values.secrets.ghcrlogin.data }}
