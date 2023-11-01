@@ -10,3 +10,7 @@ cert-manager:
   enabled: true
   namespace: cert-manager
   server: 'https://acme-staging-v02.api.letsencrypt.org/directory'
+
+mastodata:
+  vent:
+    apiBaseUrl: https://fosstodon.org

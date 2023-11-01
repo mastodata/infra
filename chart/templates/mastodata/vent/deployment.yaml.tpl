@@ -21,3 +21,8 @@ spec:
           env:
             - name: TASK_ADDRESS
               value: "tcp://task:5559"
+            - name: API_BASE_URL
+              value: {{ .Values.mastodata.vent.apiBaseUrl }}
+          envFrom:
+            - secretRef:
+                name: mastodata-vent-env
