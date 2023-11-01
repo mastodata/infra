@@ -23,5 +23,3 @@ spec:
               value: "tcp://*:5559"
             - name: SINK_ADDRESS
               value: "tcp://sink:5559"
-      imagePullSecrets:
-        - name: ghcr-login

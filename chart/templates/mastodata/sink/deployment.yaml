@@ -21,5 +21,3 @@ spec:
           env:
             - name: SINK_ADDRESS
               value: "tcp://*:5559"
-      imagePullSecrets:
-        - name: ghcr-login
