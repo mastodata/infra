@@ -1,6 +1,12 @@
 dependencies:
+- name: ingress-nginx
+  repository: https://kubernetes.github.io/ingress-nginx
+  version: 4.8.3
+- name: cert-manager
+  repository: https://charts.jetstack.io
+  version: v1.13.0
 - name: questdb
   repository: https://helm.questdb.io/
   version: 0.33.0
-digest: sha256:2fe202612ddc556996a5021ca9360c0104f30a7f85bb5cb1967141dce08a47e3
-generated: "2023-09-07T12:47:54.72069296-04:00"
+digest: sha256:7c926df06a3f13cb77b85910fb2820678e2c1b151505f462248179a07b78c826
+generated: "2023-11-01T09:53:39.157307214-04:00"

@@ -1,0 +1,12 @@
+grafana:
+  version: "10.1.0"
+
+keycloak:
+  enabled: true
+  version: "22.0.3"
+  host: 'keycloak.mastodata.org'
+
+cert-manager:
+  enabled: true
+  namespace: cert-manager
+  server: 'https://acme-staging-v02.api.letsencrypt.org/directory'
